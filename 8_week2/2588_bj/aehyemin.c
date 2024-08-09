@@ -21,4 +21,6 @@ int main () {
     printf("%d\n", fourth/10);
     printf("%d\n", fifth/100);
     printf("%d\n",a*b);
+
+    return 0;
 }
