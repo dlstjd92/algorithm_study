@@ -5,13 +5,13 @@ int main(){
     scanf("%d %d %d %d", &x, &y, &w, &h);
 
     int min;
-    if (x < w-x) min = x;
-    else min = w-x;
 
-    if (y < min) min = y;
-    if (h-y < min) min = h-y; 
+    min = x < w-x ? x : w-x;
+    min = y < min ? y : min;
+    min = h-y < min ? h-y : min; 
 
     printf("%d", min);
-    return min;
+    
+    return 0;
 }
 
