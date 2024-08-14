@@ -5,18 +5,15 @@ int main(){
     scanf("%d", &N);
 
     for (int i = 0; i < N; i++){
-        char str[80];
-        scanf("%s", str);
-
-        char *cur = &str[0];
         int score = 0, pre = 0;
+        char str[80];
+        char *cur = str;
+        
+        scanf("%s", str);
 
         while (*cur){
             if (*cur == 'O'){
-                if (pre){
-                    score += pre;
-                }
-                score++;
+                score += pre + 1;
                 pre++;
             }
             else pre = 0;
