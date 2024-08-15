@@ -7,7 +7,6 @@ int main () {
     scanf("%[^\n]", words);
 
     char *ptr = strtok(words, " ");
-
     
     while (ptr != NULL) {
         ptr = strtok(NULL, " ");
