@@ -13,7 +13,6 @@ int main(){
 
     for (int i = 1000000000; i > 1; i /= 10){ 
         num[cnt] = result % i / (i / 10);
-        // count[(result % i / (i / 10))]++;
         cnt ++;
     }
 
