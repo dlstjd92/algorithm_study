@@ -6,7 +6,7 @@ int main(void){
 
     cnt = (V - A) / (A - B);
 
-    if ((V - (A - B)*cnt - A) <= 0) cnt += 1;
+    if (V <= (A - B) * cnt + A) cnt += 1;
     else cnt += 2;
 
     printf("%d", cnt);
