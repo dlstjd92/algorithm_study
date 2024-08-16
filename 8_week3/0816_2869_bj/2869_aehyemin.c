@@ -1,25 +1,43 @@
 #include <stdio.h>
 
+
+
 int main () {
     int a,b,v;
-    int cnt=0 
+    int cnt=0 ;
     scanf("%d %d %d", &a,&b,&v);
     //수학 공식을 만들라고? 오우쉣
-    
+    int how_day = (v-b) / (a-b);
 
-    if (a >= v) {
-        printf("1\n");
-    } else //첫날에 도착하지 않을떄 
-    {   
-        int day_move = a-b;
-        int one_day_before = v-a;
-        int how_day = ((one_day_before + day_move-1) / day_move);
-        cnt = 1 + how_day;
-        printf("%d\n", cnt);
+    if ((v-b) % (a-b) != 0) {
+        how_day = (v-b) / (a-b) +1;
     }
 
+
+    printf("%d", how_day);
     return 0;
 }
+
+// int main () {
+//     int a,b,v;
+//     int cnt=0 ;
+//     scanf("%d %d %d", &a,&b,&v);
+//     //수학 공식을 만들라고? 오우쉣
+    
+
+//     if (a >= v) {
+//         printf("1\n");
+//     } else //첫날에 도착하지 않을떄 
+//     {   
+//         int day_move = a-b;
+//         int one_day_before = v-a;
+//         int how_day = ((one_day_before + day_move-1) / day_move);
+//         cnt = 1 + how_day;
+//         printf("%d\n", cnt);
+//     }
+
+//     return 0;
+// }
 
 // #include <stdio.h>
 
