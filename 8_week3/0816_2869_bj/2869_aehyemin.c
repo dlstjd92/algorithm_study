@@ -10,7 +10,7 @@ int main () {
     int how_day = (v-b) / (a-b);
 
     if ((v-b) % (a-b) != 0) {
-        how_day = (v-b) / (a-b) +1;
+        how_day = (v-b) / (a-b) +1;//how_day++;
     }
 
 
