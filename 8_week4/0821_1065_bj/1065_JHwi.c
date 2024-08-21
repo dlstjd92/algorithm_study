@@ -3,7 +3,6 @@ int main()
 {
     int N, res = 0, num, n1, n10, n100, cnt = 0;
     scanf("%d", &N);
-
     if (N < 100)res = N;
     else
     {
