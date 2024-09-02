@@ -9,10 +9,17 @@ def solution(picks, minerals):
     # list_load에 저장
     list_load = []
 
-    while (len(minerals) >= 5):
+    while (len(minerals)):
         load = dia = 0
-
-        for i in range(5):
+        
+        # set_size 설정
+        if len(minerals) >= 5:
+            set_size = 5
+        else:
+            set_size = len(minerals)
+        
+        # stone 곡괭이를 기준으로 작업부하 계산
+        for i in range(set_size):
             if minerals[0] == "diamond":
                 load += 25
                 dia += 1
@@ -23,26 +30,7 @@ def solution(picks, minerals):
             
             del minerals[0]
         
-        list_load.append((load,dia,5))
-
-    # 광물의 개수가 5의 배수가 아닌 경우, 
-    # 남은 광물 set 작업부하 계산
-    load = dia = 0
-    len_remain = len(minerals)
-
-    for i in range(len_remain):
-        
-        if minerals[0] == "diamond":
-            load += 25
-            dia += 1
-        elif minerals[0] == "iron":
-            load += 5
-        else:
-            load += 1
-        
-        del minerals[0]
-        
-    list_load.append((load,dia,len_remain))
+        list_load.append((load,dia,set_size))
 
     # 한 set의 load에 대해 dia 곡괭이는 5로, iron 곡괭이는 dia * 5 + (set 크기 - dia)로 낮출 수 있음
     # list_load에서 load값이 높은 순으로 좋은 곡괭이를 배치해 tiredness 최소화
@@ -61,4 +49,4 @@ def solution(picks, minerals):
 
     return tiredness
 
-# print(solution([0, 1, 1], ["diamond", "diamond", "diamond", "diamond", "diamond", "iron", "iron", "iron", "iron", "iron", "diamond"]))
+print(solution([0, 1, 1], ["diamond", "diamond", "diamond", "diamond", "diamond", "iron", "iron", "iron", "iron", "iron", "diamond"]))
