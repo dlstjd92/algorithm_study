@@ -44,7 +44,7 @@ def solution(picks, minerals):
         
     list_load.append((load,dia,len_remain))
 
-    # 한 set의 load에 대해 dia 곡괭이는 5로, iron 곡괭이는 dia * 5 + (5 - dia)로 낮출 수 있음
+    # 한 set의 load에 대해 dia 곡괭이는 5로, iron 곡괭이는 dia * 5 + (set 크기 - dia)로 낮출 수 있음
     # list_load에서 load값이 높은 순으로 좋은 곡괭이를 배치해 tiredness 최소화
     list_load.sort(reverse=True)
 
