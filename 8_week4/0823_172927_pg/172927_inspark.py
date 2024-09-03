@@ -1,5 +1,7 @@
 def solution(picks, minerals):
     answer = 0
+    long = sum(picks)*5
+    depth = len(minerals)
 
     # 일단 5개 묶음으로 끊어서 몇 구획인지 나누기
 
@@ -27,9 +29,18 @@ def solution(picks, minerals):
 
     matrix[sector-1][5] = matrix[sector-1].count("diamond") * 25 + matrix[sector-1].count("iron") * 5 + matrix[sector-1].count("stone")
 
-    # matrix.sort(key = lambda x:x[5])
+    
+    # print(matrix)
+    # 여기서 범위를 정해줘야함... 곡괭이수가 부족한경우...
+    # print(sum(picks)*5, len(minerals))
+    if (long<depth):
+        matrix = matrix[:sum(picks)]
+        print(matrix)
+    
+    
+    matrix.sort(key = lambda x:x[5])
 
-    print(matrix)
+    # print(matrix)
 
     for i in range(3):
         for j in range(picks[i]):
@@ -38,7 +49,7 @@ def solution(picks, minerals):
             if len(matrix) == 0:
                 return answer
 
-            temp = matrix.pop(0)
+            temp = matrix.pop()
             if i == 0:
                 answer += 5
             elif i == 1:
@@ -47,14 +58,5 @@ def solution(picks, minerals):
                 answer += temp[5]
 
     return answer
-
-picks = [1, 0, 1]
-minerals = ["stone", "stone", "stone", "stone", "stone", "iron", "iron", "iron", "iron", "iron", "diamond", "diamond"]
-
-print(solution(picks, minerals))
-
-
-
-
 
 
