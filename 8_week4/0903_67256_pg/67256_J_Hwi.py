@@ -12,10 +12,10 @@ def solution(numbers, hand):
     }
     print(numbers)
     for i in numbers:
-        if i in [1, 4, 7]:
+        if i == 1 or i == 4 or i == 7:
             answer += "L"
             L = numpad[i]
-        elif i in [3, 6, 9]:
+        elif i == 3 or i == 6 or i == 9:
             answer += "R"
             R = numpad[i]
         else:
