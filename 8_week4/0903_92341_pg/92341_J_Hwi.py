@@ -40,9 +40,9 @@ def solution(fees, records):
 
         car_parking_final[car_num] = result
 
-    T = sorted(car_parking_final)
+    total_cars = sorted(car_parking_final)
 
-    for i in T:
+    for i in total_cars:
         answer.append(car_parking_final[i])
 
     return answer
