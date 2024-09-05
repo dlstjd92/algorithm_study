@@ -34,10 +34,10 @@ def solution(fees, records):
 
         result = 0
 
-        if acctime <= fees[0]:
+        if acctime <= fees[0]: #기본시간 이하
             result = fees[1]
 
-        else:
+        else: # 기본시간 이상
             result = fees[1] + math.ceil((acctime - fees[0])/fees[2]) * fees[3]
 
         car_parking_final[car_num] = result
