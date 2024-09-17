@@ -36,7 +36,6 @@ def solution(queue1, queue2):
     return -1
 
 
-
 # from collections import deque
 # def solution(queue1, queue2):
 #     #큐는 선입선출
