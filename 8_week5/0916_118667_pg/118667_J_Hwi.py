@@ -21,7 +21,7 @@ def solution(queue1, queue2):
             b -= num
         answer += 1
         if answer >= 300000:
-            answer -1
+            answer = -1
             break
 
     if a == b:
