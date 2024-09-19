@@ -7,7 +7,7 @@ int main(){
 
     if ( C % 2 == 0) 
         printf("%d", A);
-    else 
+    else
         printf("%d", A^B);
     
     return 0;
