@@ -11,12 +11,12 @@ min_A = 100
 
 # 능력치 재는 함수
 def ch_ABILITY(team):
-    avility = 0
+    ability = 0
     for i in team:
         for j in team:
             if i != j:
-                absility += human[i][j]
-    return absility
+                ability += human[i][j]
+    return ability
 
 def backtrack(idx, count):
     global min_A
